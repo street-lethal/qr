@@ -31,3 +31,8 @@ bundle exec rake html
 bundle exec rake png
 ```
 * `out` ディレクトリに.pngファイルが出力される
+
+## in.txt内容クリア + .pngファイル削除
+```bash
+bundle exec rake clear
+```

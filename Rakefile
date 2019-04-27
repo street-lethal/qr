@@ -32,3 +32,12 @@ desc '.pngファイル出力'
 task :png do
   process { |qr_maker, i| qr_maker.png(output_filename: format('%02d', i)) }
 end
+
+desc 'in.txt内容クリア + .pngファイル削除'
+task :clear do
+  FileUtils.rm 'in.txt'
+  FileUtils.touch 'in.txt'
+  Dir.glob('out/*.png').each do |file|
+    FileUtils.rm file
+  end
+end
