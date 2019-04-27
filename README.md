@@ -20,6 +20,11 @@ bundle exec rake output
 bundle exec rake img
 ```
 
+### HTMLを標準出力に出力
+```bash
+bundle exec rake html
+```
+
 ### .pngファイルに出力
 ```bash
 bundle exec rake png

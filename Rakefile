@@ -18,6 +18,15 @@ task :img do
   end
 end
 
+desc 'HTMLを標準出力に出力'
+task :html do
+  File.open('in.txt') do |file|
+    file.each do |line|
+      puts QrMaker.new(line).html
+    end
+  end
+end
+
 desc '.pngファイル出力'
 task :png do
   File.open('in.txt') do |file|

@@ -16,6 +16,10 @@ class QrMaker
     "<img src=\"#{base64}\">"
   end
 
+  def html
+    "<html><body>#{img_tag}</body></html>"
+  end
+
   def png(output_filename: 'out')
     img.save("out/#{output_filename}.png")
   end
