@@ -8,6 +8,7 @@ bundle install --path vendor/bundle
 touch in.txt
 ```
 * `in.txt` にQR化したい文字列を記載
+* 複数ある場合は複数行記載(空行は無視される)
 
 ## 使用
 ### Base64文字列を標準出力に出力
