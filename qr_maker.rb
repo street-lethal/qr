@@ -12,8 +12,8 @@ class QrMaker
     puts base64
   end
 
-  def png
-    img.save('out.png')
+  def png(output_filename: 'out')
+    img.save("#{output_filename}.png")
   end
 
   private
