@@ -10,9 +10,14 @@ touch in.txt
 * `in.txt` にQR化したい文字列を記載
 
 ## 使用
-### 標準出力に出力
+### Base64文字列を標準出力に出力
 ```bash
-bundle exec rake print
+bundle exec rake output
+```
+
+### <img>タグを標準出力に出力
+```bash
+bundle exec rake img
 ```
 
 ### .pngファイルに出力

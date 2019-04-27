@@ -8,8 +8,12 @@ class QrMaker
     @qr = RQRCode::QRCode.new(str)
   end
 
-  def print
-    puts base64
+  def base64
+    img.to_data_url
+  end
+
+  def img_tag
+    "<img src=\"#{base64}\">"
   end
 
   def png(output_filename: 'out')
@@ -20,9 +24,5 @@ class QrMaker
 
   def img
     @qr.to_img.resize(200, 200)
-  end
-
-  def base64
-    img.to_data_url
   end
 end
