@@ -15,7 +15,7 @@ touch in.txt
 bundle exec rake output
 ```
 
-### <img>タグを標準出力に出力
+### \<img\>タグを標準出力に出力
 ```bash
 bundle exec rake img
 ```
