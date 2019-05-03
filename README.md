@@ -28,6 +28,7 @@
 
 ## docker-compose使用しない場合
 ### 事前コマンド
+docker-compose 使用しない方法は `app` ディレクトリ上でコマンド実行する為、事前にディレクトリ移動しておく
 ```bash
 cd app
 ```
