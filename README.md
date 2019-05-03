@@ -4,7 +4,7 @@
 ```bash
 ./scripts/00_setup.sh
 ```
-* `in.txt` にQR化したい文字列を記載  
+* `io/in.txt` にQR化したい文字列を記載  
 (複数行ある場合は複数行記載 / 空行は無視される)
 
 ### 使用
@@ -21,7 +21,7 @@
 ./scripts/03_html.sh
 ```
 * .pngファイルに出力  
-(`out` ディレクトリに.pngファイルが出力される)
+(`io/out` ディレクトリに.pngファイルが出力される)
 ```bash
 ./scripts/04_png.sh
 ```
@@ -41,7 +41,7 @@ bundle install --path vendor/bundle
 ```bash
 touch ../io/in.txt
 ```
-* `in.txt` にQR化したい文字列を記載  
+* `../io/in.txt` にQR化したい文字列を記載  
 (複数ある場合は複数行記載 / 空行は無視される)
 
 ### 使用
@@ -58,7 +58,7 @@ bundle exec rake img
 bundle exec rake html
 ```
 * .pngファイルに出力  
-(`out` ディレクトリに.pngファイルが出力される)
+(`../io/out` ディレクトリに.pngファイルが出力される)
 ```bash
 bundle exec rake png
 ```
