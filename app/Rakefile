@@ -1,9 +1,11 @@
 require './qr_maker'
+INPUT_FILE = '../io/in.txt'.freeze
+OUTPUT_DIR = '../io/out'.freeze
 
 def process
   return unless block_given?
 
-  File.open('in.txt') do |file|
+  File.open(INPUT_FILE) do |file|
     file.each_with_index do |line, i|
       next if line.chomp.empty?
 
@@ -30,14 +32,14 @@ end
 
 desc '.pngファイル出力'
 task :png do
-  process { |qr_maker, i| qr_maker.png(output_filename: format('%02d', i)) }
+  process { |qr_maker, i| qr_maker.png(output_dir: OUTPUT_DIR, output_filename: format('%02d', i)) }
 end
 
 desc 'in.txt内容クリア + .pngファイル削除'
 task :clear do
-  FileUtils.rm 'in.txt'
-  FileUtils.touch 'in.txt'
-  Dir.glob('out/*.png').each do |file|
+  FileUtils.rm INPUT_FILE
+  FileUtils.touch INPUT_FILE
+  Dir.glob("#{OUTPUT_DIR}/*.png").each do |file|
     FileUtils.rm file
   end
 end

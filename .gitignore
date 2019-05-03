@@ -1,4 +1,4 @@
 /.bundle
 /vendor/bundle
-/in.txt
-/out
+/io/in.txt
+/io/out

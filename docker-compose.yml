@@ -1,0 +1,5 @@
+rubyqr:
+  build: .
+  working_dir: /app_root/app
+  volumes:
+    - ./io:/app_root/io
