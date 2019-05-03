@@ -27,6 +27,10 @@
 ```
 
 ## docker-compose使用しない場合
+### 事前コマンド
+```bash
+cd app
+```
 ### 準備
 * インストール
 ```bash
@@ -34,7 +38,7 @@ bundle install --path vendor/bundle
 ```
 * 元ファイル生成
 ```bash
-touch in.txt
+touch ../io/in.txt
 ```
 * `in.txt` にQR化したい文字列を記載  
 (複数ある場合は複数行記載 / 空行は無視される)
